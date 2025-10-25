@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FITFORCE - Modern Fitness Solutions</title>
+    <title>FITFORCE - Premium Gym & Fitness Center | Online Classes & Personal Training</title>
+    <meta name="description" content="FITFORCE - Premium gym with online classes, personal training, and home training services. Transform your fitness journey today.">
+    <meta name="keywords" content="gym, fitness, personal training, online classes, home training, workout, exercise">
+    <meta name="author" content="FITFORCE">
+    <!-- Open Graph tags for social media -->
+    <meta property="og:title" content="FITFORCE - Premium Fitness Solutions">
+    <meta property="og:description" content="Transform your body with our expert trainers and state-of-the-art facilities.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80">
+    <meta property="og:url" content="https://fitforce.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* CSS Variables for consistent theming */
@@ -174,6 +182,28 @@
             cursor: pointer;
         }
 
+        /* Promo Banner */
+        .promo-banner {
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        .promo-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .promo-content h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
@@ -199,6 +229,31 @@
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
+        }
+
+        /* Social Proof Section */
+        .social-proof {
+            background: var(--secondary);
+            color: white;
+            padding: 40px 0;
+        }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .proof-item h3 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .proof-item p {
+            margin: 0;
+            font-size: 1.1rem;
         }
 
         /* Services Section */
@@ -273,6 +328,121 @@
             margin-bottom: 15px;
             font-size: 0.9rem;
             color: #ccc;
+        }
+
+        /* Class Schedule Section */
+        .schedule-section {
+            background: #f8f9fa;
+        }
+
+        .schedule-table {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background: var(--secondary);
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: #f5f5f5;
+        }
+
+        .class-type {
+            display: inline-block;
+            padding: 5px 10px;
+            background: var(--primary);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Trainers Section */
+        .trainers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .trainer-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .trainer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .trainer-img {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .trainer-info {
+            padding: 20px;
+        }
+
+        .trainer-info h3 {
+            margin-bottom: 5px;
+        }
+
+        .trainer-info .specialty {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            height: 200px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
         }
 
         /* Membership Section */
@@ -408,6 +578,21 @@
             font-size: 0.9rem;
         }
 
+        /* Map Section */
+        .map-section {
+            padding: 0;
+        }
+
+        .map-container {
+            height: 400px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
         /* Contact Section */
         .contact-container {
             display: grid;
@@ -537,12 +722,55 @@
             transform: translateY(-3px);
         }
 
+        .small-text {
+            font-size: 0.8rem;
+            color: #999;
+            margin-top: 10px;
+        }
+
         .copyright {
             text-align: center;
             padding-top: 30px;
             border-top: 1px solid rgba(255,255,255,0.1);
             color: #bbb;
             font-size: 0.9rem;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #777;
+        }
+
+        .close:hover {
+            color: var(--primary);
         }
 
         /* Responsive Styles */
@@ -591,6 +819,11 @@
             .section {
                 padding: 60px 0;
             }
+
+            .promo-content {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
 
         @media (max-width: 576px) {
@@ -605,6 +838,10 @@
             .btn {
                 padding: 10px 20px;
                 font-size: 0.9rem;
+            }
+
+            .proof-item h3 {
+                font-size: 2rem;
             }
         }
     </style>
@@ -622,13 +859,23 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#online-classes">Online Classes</a></li>
+                    <li><a href="#trainers">Trainers</a></li>
                     <li><a href="#membership">Membership</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
+    <!-- Promo Banner -->
+    <section class="promo-banner">
+        <div class="container">
+            <div class="promo-content">
+                <h3>🎉 Grand Opening Special - 50% Off First Month!</h3>
+                <a href="#membership" class="btn">Claim Offer</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -637,6 +884,30 @@
                 <h1>Transform Your Body, Transform Your Life</h1>
                 <p>Join FITFORCE today and experience the best in fitness with online classes, personal training, and premium gym facilities.</p>
                 <a href="#membership" class="btn">Get Started Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="proof-grid">
+                <div class="proof-item">
+                    <h3>500+</h3>
+                    <p>Happy Members</p>
+                </div>
+                <div class="proof-item">
+                    <h3>50+</h3>
+                    <p>Weekly Classes</p>
+                </div>
+                <div class="proof-item">
+                    <h3>10+</h3>
+                    <p>Expert Trainers</p>
+                </div>
+                <div class="proof-item">
+                    <h3>5</h3>
+                    <p>Location Cities</p>
+                </div>
             </div>
         </div>
     </section>
@@ -727,6 +998,128 @@
         </div>
     </section>
 
+    <!-- Class Schedule Section -->
+    <section class="section schedule-section">
+        <div class="container">
+            <h2 class="section-title">Weekly Class Schedule</h2>
+            <div class="schedule-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>6:00 AM</td>
+                            <td><span class="class-type">HIIT</span></td>
+                            <td><span class="class-type">Yoga</span></td>
+                            <td><span class="class-type">Strength</span></td>
+                            <td><span class="class-type">Cardio</span></td>
+                            <td><span class="class-type">HIIT</span></td>
+                            <td><span class="class-type">Yoga</span></td>
+                        </tr>
+                        <tr>
+                            <td>8:00 AM</td>
+                            <td><span class="class-type">Pilates</span></td>
+                            <td><span class="class-type">Strength</span></td>
+                            <td><span class="class-type">Cardio</span></td>
+                            <td><span class="class-type">Yoga</span></td>
+                            <td><span class="class-type">Pilates</span></td>
+                            <td><span class="class-type">HIIT</span></td>
+                        </tr>
+                        <tr>
+                            <td>5:00 PM</td>
+                            <td><span class="class-type">Strength</span></td>
+                            <td><span class="class-type">HIIT</span></td>
+                            <td><span class="class-type">Yoga</span></td>
+                            <td><span class="class-type">Cardio</span></td>
+                            <td><span class="class-type">Strength</span></td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>7:00 PM</td>
+                            <td><span class="class-type">Cardio</span></td>
+                            <td><span class="class-type">Yoga</span></td>
+                            <td><span class="class-type">HIIT</span></td>
+                            <td><span class="class-type">Strength</span></td>
+                            <td><span class="class-type">Cardio</span></td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainers Section -->
+    <section class="section" id="trainers">
+        <div class="container">
+            <h2 class="section-title">Meet Our Trainers</h2>
+            <div class="trainers-grid">
+                <div class="trainer-card">
+                    <div class="trainer-img" style="background-image: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="trainer-info">
+                        <h3>John Smith</h3>
+                        <p class="specialty">Strength & Conditioning</p>
+                        <p>10+ years experience specializing in strength training and athletic performance.</p>
+                    </div>
+                </div>
+                <div class="trainer-card">
+                    <div class="trainer-img" style="background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="trainer-info">
+                        <h3>Sarah Johnson</h3>
+                        <p class="specialty">Yoga & Mindfulness</p>
+                        <p>Certified yoga instructor with expertise in Vinyasa, Hatha, and restorative practices.</p>
+                    </div>
+                </div>
+                <div class="trainer-card">
+                    <div class="trainer-img" style="background-image: url('https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="trainer-info">
+                        <h3>Mike Rodriguez</h3>
+                        <p class="specialty">HIIT & Cardio</p>
+                        <p>Former athlete turned trainer with a passion for high-intensity workouts and endurance.</p>
+                    </div>
+                </div>
+                <div class="trainer-card">
+                    <div class="trainer-img" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="trainer-info">
+                        <h3>Alex Chen</h3>
+                        <p class="specialty">Functional Training</p>
+                        <p>Specializes in functional movement patterns to improve daily life activities and prevent injury.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Our Facility</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Main workout area" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cardio section" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Weight training area" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Group class" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Membership Section -->
     <section class="section" id="membership">
         <div class="container">
@@ -745,7 +1138,7 @@
                         <li>Limited group classes</li>
                     </ul>
                     <div class="plan-button">
-                        <a href="#" class="btn btn-secondary">Select Plan</a>
+                        <a href="#" class="btn btn-secondary" onclick="showPaymentModal('Basic Plan - $29/month')">Select Plan</a>
                     </div>
                 </div>
                 <div class="plan-card featured">
@@ -762,7 +1155,7 @@
                         <li>Guest passes (2/month)</li>
                     </ul>
                     <div class="plan-button">
-                        <a href="#" class="btn">Select Plan</a>
+                        <a href="#" class="btn" onclick="showPaymentModal('Pro Plan - $49/month')">Select Plan</a>
                     </div>
                 </div>
                 <div class="plan-card">
@@ -780,7 +1173,7 @@
                         <li>Spa and recovery access</li>
                     </ul>
                     <div class="plan-button">
-                        <a href="#" class="btn btn-secondary">Select Plan</a>
+                        <a href="#" class="btn btn-secondary" onclick="showPaymentModal('Elite Plan - $79/month')">Select Plan</a>
                     </div>
                 </div>
             </div>
@@ -835,6 +1228,21 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9503398796587!2d-73.99802462376317!3d40.725623471393215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598c338f691d%3A0x6a6a26019f11bc04!2sFITFORCE!5e0!3m2!1sen!2sus!4v1690000000000!5m2!1sen!2sus" 
+                width="100%" 
+                height="400" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
     </section>
 
@@ -944,6 +1352,7 @@
                         <input type="email" class="form-control" placeholder="Your Email" required>
                         <button type="submit" class="btn" style="margin-top: 10px; width: 100%;">Subscribe</button>
                     </form>
+                    <p class="small-text">We respect your privacy. Unsubscribe at any time.</p>
                 </div>
             </div>
             <div class="copyright">
@@ -951,6 +1360,38 @@
             </div>
         </div>
     </footer>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Complete Your Membership</h3>
+            <p id="selectedPlan">Pro Plan - $49/month</p>
+            <form id="paymentForm">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" class="form-control" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Card Number" required>
+                </div>
+                <div style="display: flex; gap: 15px;">
+                    <div class="form-group" style="flex: 1;">
+                        <input type="text" class="form-control" placeholder="MM/YY" required>
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <input type="text" class="form-control" placeholder="CVC" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn">Complete Payment</button>
+            </form>
+        </div>
+    </div>
 
     <script>
         // Mobile Menu Toggle
@@ -977,6 +1418,15 @@
             contactForm.reset();
         });
         
+        // Payment form submission
+        const paymentForm = document.getElementById('paymentForm');
+        paymentForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your payment! Your membership is now active.');
+            paymentForm.reset();
+            closeModal();
+        });
+        
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -994,6 +1444,46 @@
                 }
             });
         });
+        
+        // Modal functionality
+        const modal = document.getElementById('paymentModal');
+        const closeBtn = document.querySelector('.close');
+        
+        function showPaymentModal(plan) {
+            document.getElementById('selectedPlan').textContent = plan;
+            modal.style.display = 'flex';
+        }
+        
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+        
+        closeBtn.addEventListener('click', closeModal);
+        
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+        
+        // Newsletter form submission
+        const newsletterForms = document.querySelectorAll('.newsletter-form');
+        newsletterForms.forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for subscribing to our newsletter!');
+                form.reset();
+            });
+        });
+    </script>
+
+    <!-- Google Analytics (replace GA_MEASUREMENT_ID with your actual ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
     </script>
 </body>
 </html>
